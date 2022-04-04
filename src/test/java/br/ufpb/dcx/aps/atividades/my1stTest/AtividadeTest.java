@@ -5,11 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 class AtividadeTest {
 
-
     Produto produto;
+
     @BeforeEach
     void setUp() {
         produto = new Produto();
@@ -18,21 +17,20 @@ class AtividadeTest {
     @Test
     void testProduto() {
 
-        assertEquals("",produto.getNome());
-        assertEquals(0.0,produto.getPreco());
+        assertEquals("", produto.getNome());
+        assertEquals(0.0, produto.getPreco());
 
         produto.setNome("Sapato");
-        assertEquals("Sapato",produto.getNome());
-        produto.setDescricao("Sapato social preto");
-        assertEquals("Sapato social preto", produto.getDescricao());
+        assertEquals("Sapato", produto.getNome());
+        produto.setDescrição("Sapato social preto");
+        assertEquals("Sapato social preto", produto.getDescrição());
         produto.setPreco(100.0);
-        assertEquals(100.0,produto.getPreco());
+        assertEquals(100.0, produto.getPreco());
 
         produto.setPreco(0.1);
-        assertEquals(0.1,produto.getPreco());
+        assertEquals(0.1, produto.getPreco());
 
-        Exception e = assertThrows(RuntimeException.class, () ->
-                       produto.setPreco(-30.0) );
+        Exception e = assertThrows(RuntimeException.class, () -> produto.setPreco(-30.0));
         assertEquals("preco não pode ser negativo: -30.0", e.getMessage());
 
     }

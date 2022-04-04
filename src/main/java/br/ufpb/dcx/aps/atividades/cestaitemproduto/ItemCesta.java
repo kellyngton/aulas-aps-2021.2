@@ -1,4 +1,4 @@
-package cestaitemproduto;
+package br.ufpb.dcx.aps.atividades.cestaitemproduto;
 
 public class ItemCesta {
 

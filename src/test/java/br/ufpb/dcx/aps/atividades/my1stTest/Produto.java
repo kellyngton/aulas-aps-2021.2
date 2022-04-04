@@ -1,13 +1,21 @@
-package br.ufpb.dcx.aps.atividades.cestaitemproduto;
+package br.ufpb.dcx.aps.atividades.my1stTest;
 
-public class Produto implements ProdutoService {
+public class Produto  {
 
-    private String nome;
+    private String nome, descrição;
     private double preco;
     private int estoque;
 
     public String getNome() {
         return nome;
+    }
+
+    public String getDescrição() {
+        return descrição;
+    }
+
+    public void setDescrição(String descrição) {
+        this.descrição = descrição;
     }
 
     public void setNome(String nome) {
@@ -29,4 +37,5 @@ public class Produto implements ProdutoService {
     public void setEstoque(int estoque) {
         this.estoque = estoque;
     }
+
 }
